@@ -1,50 +1,55 @@
 <div class="compras index">
 
-
-    <div class="page-header">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="col-md-3">
-                    <h1><?php echo __('Compras'); ?></h1>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-group">
-                    </div>
-                    <div class="form-group">
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#myModal">
-                            <span class="glyphicon glyphicon-plus"></span>&nbsp; Nova Compra
-                        </button>
-                    </div>
-
-                </div>
-            </div><!-- end col md 12 -->
-        </div><!-- end row -->
-
-    </div>
+    <style>
+        .page-header{
+            margin-top: 0px
+        }
+    </style>
 
     <div class="row">
 
         <div class="col-md-3">
-            <div class="actions">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Ações</div>
-                    <div class="panel-body">
-                        <ul class="nav nav-pills nav-stacked">
-                            <li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Nova Compra'), array('action' => 'add'), array('escape' => false)); ?></li>
-                            <li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;Formas de Pagamentos'), array('controller' => 'forma_pagamentos', 'action' => 'index'), array('escape' => false)); ?> </li>
-                            <li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Nova Forma de Pagamento'), array('controller' => 'forma_pagamentos', 'action' => 'add'), array('escape' => false)); ?> </li>
-                            <li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;Fornecedores'), array('controller' => 'suppliers', 'action' => 'index'), array('escape' => false)); ?> </li>
-                            <li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Novo Fornecedor'), array('controller' => 'suppliers', 'action' => 'add'), array('escape' => false)); ?> </li>
-                        </ul>
-                    </div><!-- end body -->
-                </div><!-- end panel -->
-            </div><!-- end actions -->
-
-            <?php echo $this->element('side_totaliza_compras'); ?>
+            <div class="affix">
+                <div class="actions">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Ações</div>
+                        <div class="panel-body">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Nova Compra'), array('action' => 'add'), array('escape' => false)); ?></li>
+                                <li><?php echo $this->Html->link(__('<i class="fa fa-money"></i>&nbsp;&nbsp;Formas de Pagamentos'), array('controller' => 'forma_pagamentos', 'action' => 'index'), array('escape' => false)); ?> </li>
+                                <li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Nova Forma de Pagamento'), array('controller' => 'forma_pagamentos', 'action' => 'add'), array('escape' => false)); ?> </li>
+                                <li><?php echo $this->Html->link(__('<i class="fa fa-truck"></i>&nbsp;&nbsp;Fornecedores'), array('controller' => 'suppliers', 'action' => 'index'), array('escape' => false)); ?> </li>
+                                <li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Novo Fornecedor'), array('controller' => 'suppliers', 'action' => 'add'), array('escape' => false)); ?> </li>
+                            </ul>
+                        </div><!-- end body -->
+                    </div><!-- end panel -->
+                </div><!-- end actions -->
+                <?php echo $this->element('side_totaliza_compras'); ?>
+            </div><!-- affix -->
         </div><!-- end col md 3 -->
 
         <div class="col-md-9">
+            <div class="page-header">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-3">
+                            <h1><?php echo __('Compras'); ?></h1>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                            </div>
+                            <div class="form-group">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#myModal">
+                                    <span class="glyphicon glyphicon-plus"></span>&nbsp; Nova Compra
+                                </button>
+                            </div>
+
+                        </div>
+                    </div><!-- end col md 12 -->
+                </div><!-- end row -->
+
+            </div>
 
             <style>
                 .compras-table .panel-body{

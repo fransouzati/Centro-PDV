@@ -7,11 +7,13 @@
 ?>
 
 <div class="row">
-	<div class="col-md-3">
-		<?php echo $this->element('side_totaliza_compras'); ?>
-	</div> <!-- /.row -->
-	<div class="col-md-6">
-		<?php echo $this->element('ComprasMes'); ?>
-		<?php echo $this->element('ContasAPagar'); ?>
-	</div> <!-- /.row -->
+    <div class="col-md-3">
+        <div class="affix">
+            <?php echo $this->element('side_totaliza_compras'); ?>
+        </div>
+    </div> <!-- /.row -->
+    <div class="col-md-6">
+        <?php echo $this->element('ComprasMes'); ?>
+        <?php echo $this->element('ContasAPagar'); ?>
+    </div> <!-- /.row -->
 </div> <!-- /.col-md-3 -->
