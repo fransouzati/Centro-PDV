@@ -31,6 +31,9 @@
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
     <script src="http://localhost/pdv/app/webroot/js/Chart.min.js"></script>
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 
     <?php //echo $this->Html->script('Chart.min'); ?>
 
