@@ -32,8 +32,8 @@
 						<div class="panel-body">
 							<ul class="nav nav-pills nav-stacked">
 								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Nova Compra'), array('action' => 'add'), array('escape' => false)); ?></li>
-								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;Formas Pagamentos'), array('controller' => 'forma_pagamentos', 'action' => 'index'), array('escape' => false)); ?> </li>
-								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Nova Forma Pagamento'), array('controller' => 'forma_pagamentos', 'action' => 'add'), array('escape' => false)); ?> </li>
+								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;Formas de Pagamentos'), array('controller' => 'forma_pagamentos', 'action' => 'index'), array('escape' => false)); ?> </li>
+								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Nova Forma de Pagamento'), array('controller' => 'forma_pagamentos', 'action' => 'add'), array('escape' => false)); ?> </li>
 								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;Fornecedores'), array('controller' => 'suppliers', 'action' => 'index'), array('escape' => false)); ?> </li>
 								<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Novo Fornecedor'), array('controller' => 'suppliers', 'action' => 'add'), array('escape' => false)); ?> </li>
 							</ul>
@@ -45,8 +45,18 @@
 		</div><!-- end col md 3 -->
 
 		<div class="col-md-9">
-			<div class="table-responsive">
-				<table cellpadding="0" cellspacing="0" class="table table-striped">
+
+		<style>
+            .compras-table .panel-body{
+                padding: 0;
+            }
+        </style>
+		<div class="panel panel-default compras-table">
+            <div class="panel-heading">Compras</div>
+                <div class="panel-body">
+
+                    <div class="table-responsive">
+				        <table cellpadding="0" cellspacing="0" class="table table-striped">
 					<thead>
 						<tr>
 							<th><?php echo $this->Paginator->sort('supplier_fantasia', 'Fornecedor'); ?></th>
@@ -147,11 +157,13 @@
 					<?php endforeach; ?>
 					</tbody>
 				</table>
-			</div>
-
-			<p>
+			        </div>
+                    <p style="padding: 0 15px">
 				<small><?php echo $this->Paginator->counter(array('format' => __('Página {:page} de {:pages}, mostrando {:current} registros de um total de {:count}, começando no registro {:start}, terminando em {:end}')));?></small>
 			</p>
+                </div><!-- end body -->
+        </div><!-- end panel -->
+
 
 			<?php
 			$params = $this->Paginator->params();
