@@ -173,7 +173,7 @@
                 <?php
                 echo $this->Paginator->prev('&larr; Anterior', array('class' => 'prev','tag' => 'li','escape' => false), '<a onclick="return false;">&larr; Anterior</a>', array('class' => 'prev disabled','tag' => 'li','escape' => false));
                 echo $this->Paginator->numbers(array('separator' => '','tag' => 'li','currentClass' => 'active','currentTag' => 'a'));
-                echo $this->Paginator->next('Próxima &rarr;', array('class' => 'Próxima','tag' => 'li','escape' => false), '<a onclick="return false;">Next &rarr;</a>', array('class' => 'next disabled','tag' => 'li','escape' => false));
+                echo $this->Paginator->next('Próxima &rarr;', array('class' => 'Próxima','tag' => 'li','escape' => false), '<a onclick="return false;">Próxima &rarr;</a>', array('class' => 'next disabled','tag' => 'li','escape' => false));
                 ?>
             </ul>
             <?php } ?>
