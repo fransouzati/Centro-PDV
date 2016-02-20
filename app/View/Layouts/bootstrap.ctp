@@ -41,7 +41,7 @@
     <![endif]-->
 
     <style type="text/css">
-    	body{ padding: 70px 0px; }
+    	/* body{ padding: 70px 0px; } */
     </style>
 
   </head>
@@ -50,13 +50,15 @@
 
     <?php echo $this->Element('navigation'); ?>
 
-    <div class="container">
+    <div class="container" style="padding-top: 60px;">
 
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>
 
     </div><!-- /.container -->
+
+    <?php echo $this->Element('footer'); ?>
 
   </body>
 </html>
