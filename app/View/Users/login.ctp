@@ -1,6 +1,6 @@
 <div class="col-md-4 col-md-offset-4">
 	<div class="panel panel-default">
-	  <div class="panel-heading">Seja Bem Vindo</div>
+	  <div class="panel-heading"><?php echo __('Seja Bem Vindo'); ?></div>
 	  <div class="panel-body">
 	    <p><?php echo __('Digite seu nome de usuário e senha.'); ?></p>
 
